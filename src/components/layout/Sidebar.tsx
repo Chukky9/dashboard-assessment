@@ -39,6 +39,7 @@ import {
 } from '@/app/icons';
 import { useState, useEffect, useCallback } from 'react';
 import { NavItem } from '@/components/shared/NavItem';
+import ThemeToggle from '@/components/shared/ThemeToggle';
 
 export default function Sidebar() {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -105,6 +106,11 @@ export default function Sidebar() {
             <NavItem icon={MenuEight} label="Lorem" isCollapsed={isCollapsed} />
             <NavItem icon={MenuNine} label="Lorem" isCollapsed={isCollapsed} />
           </Stack>
+
+          {/* Theme Toggle */}
+          <Box pt={2} pb={4}>
+            <ThemeToggle isCollapsed={isCollapsed} />
+          </Box>
 
           {/* User Profile */}
           <Box 
