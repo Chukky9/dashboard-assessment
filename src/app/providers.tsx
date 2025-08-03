@@ -7,8 +7,8 @@ import { useState, type ReactNode } from 'react';
 import { system } from '@/theme';
 import { makeServer } from '@/mocks/server';
 
-// Initialize MirageJS in development
-if (process.env.NODE_ENV === 'development') {
+// Initialize MirageJS in both development and production for demo purposes
+if (typeof window !== 'undefined') {
   makeServer();
 }
 

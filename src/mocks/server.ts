@@ -4,14 +4,15 @@ import { createServer, Response } from 'miragejs';
 import { mockAssets, mockFlowNodes } from './data';
 import type { Asset } from './data';
 
-export function makeServer({ environment = 'development' } = {}) {
-  const server = createServer({
-    environment,
-
+export function makeServer() {
+  return createServer({
     routes() {
       this.namespace = 'api';
+      
+      // Enable passthrough for non-mocked routes
+      this.passthrough();
 
-      // Assets endpoints
+      // Assets endpoint with pagination and sorting
       this.get('/assets', (schema, request) => {
         const { pageSize = 10, page = 1, sort, order = 'asc' }: { pageSize?: number, page?: number, sort?: string, order?: string } = request.queryParams;
         
@@ -73,6 +74,4 @@ export function makeServer({ environment = 'development' } = {}) {
       });
     },
   });
-
-  return server;
 } 
