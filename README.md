@@ -1,36 +1,120 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dashboard Assessment
 
-## Getting Started
+A modern, responsive dashboard built with Next.js 14, TypeScript, and Chakra UI. This project demonstrates best practices in frontend development, including accessibility, component reusability, and modern state management.
 
-First, run the development server:
+## 🚀 Live Demo
 
+[View Live Demo](https://dashboard-assessment.vercel.app)
+
+## ✨ Features
+
+- 📱 Fully responsive design (mobile, tablet, desktop)
+- ♿ Accessible UI components with ARIA support
+- 🎨 Modern UI with Chakra UI and Panda CSS
+- 🔄 Real-time data synchronization with TanStack Query
+- 🌙 Theme customization (light/dark modes)
+- 📊 Interactive data visualization
+- 🔍 Sortable and filterable tables
+- 🎯 Mock API integration with MirageJS
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js 14](https://nextjs.org/) (App Router)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: 
+  - [Chakra UI](https://chakra-ui.com/) (v3.24.0)
+  - [Panda CSS](https://panda-css.com/)
+- **State Management**: [TanStack Query](https://tanstack.com/query)
+- **Mock API**: [MirageJS](https://miragejs.com/)
+- **Testing**: 
+  - [Jest](https://jestjs.io/)
+  - [React Testing Library](https://testing-library.com/react)
+- **Package Manager**: [PNPM](https://pnpm.io/)
+
+## 📦 Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/dashboard-assessment.git
+   cd dashboard-assessment
+   ```
+
+2. Install dependencies:
+   ```bash
+   pnpm install
+   ```
+
+3. Start the development server:
+   ```bash
+   pnpm dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## 🧪 Testing
+
+Run the test suite:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm test
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Run tests in watch mode:
+```bash
+pnpm test:watch
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📝 Development Guidelines
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Component Structure
 
-## Learn More
+Components are organized into the following categories:
+- `components/layout`: Layout-related components (Sidebar, RootLayout)
+- `components/shared`: Reusable UI components (Table, StatusBadge)
+- `components/dashboard`: Dashboard-specific components (FlowDiagram, RiskIndicator)
 
-To learn more about Next.js, take a look at the following resources:
+### Data Fetching
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Use TanStack Query hooks for data fetching and caching
+- Mock API endpoints are defined in `src/mocks/server.ts`
+- API services are centralized in `src/services/api.ts`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Styling
 
-## Deploy on Vercel
+- Use Chakra UI components for consistent styling
+- Custom theme tokens are defined in `src/theme/index.ts`
+- Use responsive props for mobile-first design
+- Follow the established color scheme and spacing system
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Testing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Write tests for all new components
+- Follow Testing Library best practices
+- Use test IDs sparingly, prefer user-centric queries
+- Mock external dependencies appropriately
+
+## 🚀 Deployment
+
+This project is configured for deployment on Vercel:
+
+1. Push your changes to GitHub
+2. Connect your repository to Vercel
+3. Configure environment variables if needed
+4. Deploy!
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🤝 Contributing
+
+While this is an assessment project, it follows standard contribution guidelines:
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Open a Pull Request
+
+## 📞 Contact
+
+For questions or feedback about this assessment, please reach out to [your-email@example.com].
