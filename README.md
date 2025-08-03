@@ -4,7 +4,9 @@ A modern, responsive dashboard built with Next.js 14, TypeScript, and Chakra UI.
 
 ## 🚀 Live Demo
 
-[View Live Demo](https://dashboard-assessment.vercel.app)
+[View Live Demo](https://dashboard-assessment-six.vercel.app/)
+
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://dashboard-assessment-six.vercel.app/)
 
 ## ✨ Features
 
@@ -92,14 +94,53 @@ Components are organized into the following categories:
 - Use test IDs sparingly, prefer user-centric queries
 - Mock external dependencies appropriately
 
+## 🔧 Environment Variables
+
+Create a `.env.local` file in the root directory:
+
+```bash
+# API Configuration
+NEXT_PUBLIC_API_URL=
+
+# Feature Flags
+NEXT_PUBLIC_ENABLE_MOCK_API=true
+NEXT_PUBLIC_ENABLE_THEME_TOGGLE=true
+
+# Deployment Environment
+NODE_ENV=development
+```
+
 ## 🚀 Deployment
 
-This project is configured for deployment on Vercel:
+This project is deployed on Vercel. To deploy your own instance:
 
-1. Push your changes to GitHub
-2. Connect your repository to Vercel
-3. Configure environment variables if needed
-4. Deploy!
+1. Fork this repository
+2. Create a new project on [Vercel](https://vercel.com)
+3. Import your forked repository
+4. Vercel will automatically detect Next.js and configure the build settings
+5. Add required environment variables in Vercel project settings
+6. Deploy!
+
+### Build Configuration
+
+The project includes a `vercel.json` configuration:
+
+```json
+{
+  "version": 2,
+  "buildCommand": "pnpm build",
+  "devCommand": "pnpm dev",
+  "installCommand": "pnpm install",
+  "framework": "nextjs"
+}
+```
+
+### Troubleshooting
+
+1. **API 404 Errors**: Make sure MirageJS is properly initialized. Check `src/app/providers.tsx` and `src/mocks/server.ts`.
+2. **Build Failures**: Ensure all dependencies are properly installed with `pnpm install`.
+3. **Type Errors**: Run `pnpm type-check` to verify TypeScript types.
+4. **Test Failures**: Run `pnpm test` to check for failing tests.
 
 ## 📄 License
 
