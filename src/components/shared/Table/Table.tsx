@@ -49,7 +49,7 @@
 
 import { Box, Icon } from '@chakra-ui/react';
 import { FiChevronUp, FiChevronDown } from 'react-icons/fi';
-import type { Column, TableProps } from '@/types/table';
+import type { TableProps } from '@/types/table';
 
 export default function Table<T extends object>({
   columns,
