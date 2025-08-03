@@ -9,6 +9,7 @@ import { useAssets } from '@/hooks/useAssets';
 import type { StatusType } from '@/types/status';
 import type { Asset } from '@/mocks/data';
 import { ServerIcon } from '@/app/icons';
+import { Column } from '@/types/table';
 
 export default function AssetTable() {
   const [sortField, setSortField] = useState<keyof Asset>('name');
@@ -48,7 +49,7 @@ export default function AssetTable() {
     );
   }
 
-  const columns = [
+  const columns: Column<Asset>[] = [
     {
       header: 'Asset',
       accessorKey: 'name' as keyof Asset,
@@ -76,15 +77,14 @@ export default function AssetTable() {
                 <Text fontSize="sm" color="gray.500">{row.ipAddress}</Text>
             </Box>
         </ChakraHStack>
-        
       ),
     },
     {
       header: 'Contextual Risk',
-      accessorKey: 'status' as keyof Asset,
-      cell: (value: StatusType) => (
+      accessorKey: 'status',
+      cell: (value: string) => (
         <Box display="flex" justifyContent="center" alignItems="center" w="full">
-            <StatusBadge status={value} />
+            <StatusBadge status={value as StatusType} />
         </Box>
       ),
     },

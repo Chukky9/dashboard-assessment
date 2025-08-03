@@ -2,6 +2,7 @@
 
 import { createServer, Response } from 'miragejs';
 import { mockAssets, mockFlowNodes } from './data';
+import type { Asset } from './data';
 
 export function makeServer({ environment = 'development' } = {}) {
   const server = createServer({
@@ -14,15 +15,15 @@ export function makeServer({ environment = 'development' } = {}) {
       this.get('/assets', (schema, request) => {
         const { pageSize = 10, page = 1, sort, order = 'asc' }: { pageSize?: number, page?: number, sort?: string, order?: string } = request.queryParams;
         
-        let data = [...mockAssets];
+        const data = [...mockAssets];
 
         // Apply sorting
         if (sort) {
-          data.sort((a: any, b: any) => {
+          data.sort((a: Asset, b: Asset) => {
             if (order === 'asc') {
-              return a[sort] > b[sort] ? 1 : -1;
+              return a[sort as keyof Asset] > b[sort as keyof Asset] ? 1 : -1;
             }
-            return a[sort] < b[sort] ? 1 : -1;
+            return a[sort as keyof Asset] < b[sort as keyof Asset] ? 1 : -1;
           });
         }
 

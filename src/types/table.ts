@@ -1,7 +1,7 @@
 export interface Column<T> {
   header: string;
   accessorKey: keyof T;
-  cell?: (value: any, row: T) => React.ReactNode;
+  cell?: (value: T[keyof T], row: T) => React.ReactNode;
 }
 
 export interface TableProps<T> {

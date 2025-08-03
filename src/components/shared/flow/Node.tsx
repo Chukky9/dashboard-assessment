@@ -52,7 +52,7 @@ const pulse = keyframes`
 `;
 
 export const Node = ({ icon, label, subLabel, bgColor = 'red.50', badge, badgeIcon, isServer }: NodeProps) => (
-  <Box position="relative" textAlign="center" data-testid={`node-${label.toLowerCase().replace(/\s+/g, '-')}`}>
+  <Box position="relative" textAlign="center" display="flex" flexDirection="column" alignItems="center" justifyContent="center" data-testid={`node-${label.toLowerCase().replace(/\s+/g, '-')}`}>
     <Circle 
       size={{ base: "48px", md: "60px" }}
       bg={bgColor}
