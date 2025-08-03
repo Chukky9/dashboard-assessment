@@ -30,15 +30,15 @@ export default function ThemeToggle({ isCollapsed = false }: ThemeToggleProps) {
     <Box
       as="button"
       onClick={handleToggle}
-      px={4}
-      py={2}
+      px={isCollapsed ? 1 : 4}
+      py={isCollapsed ? 1 : 3}
       w="full"
       transition="all 0.2s ease"
       _hover={{ bg: 'E9FAF0', _dark: { bg: 'whiteAlpha.200' } }}
       borderRadius="md"
       role="group"
     >
-      <HStack gap={3} opacity={isCollapsed ? 0 : 1}>
+      <HStack gap={3}>
         <Icon
           as={theme === 'light' ? FiMoon : FiSun}
           boxSize={5}

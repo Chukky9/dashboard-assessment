@@ -139,7 +139,7 @@ export default function Home() {
                     borderColor="gray.200" 
                     borderRadius="xl" 
                     borderStyle="solid"
-                    overflow="hidden"
+                    overflow="auto"
                     h="100%"
                   >
                     <AssetTable />

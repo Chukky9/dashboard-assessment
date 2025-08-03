@@ -7,8 +7,8 @@ export const NavItem = ({ icon, label, isActive, isCollapsed }: NavItemProps) =>
   <Box position="relative" w="full" borderRadius="md">
     <ChakraHStack
       w="full"
-      px={4}
-      py={3}
+      px={isCollapsed ? 1 : 4}
+      py={isCollapsed ? 1 : 3}
       cursor="pointer"
       bg={isActive ? '#E9FAF0' : 'transparent'}
       color={isActive ? 'black' : '#A3A9B6'}

@@ -115,8 +115,8 @@ export default function Sidebar() {
           {/* User Profile */}
           <Box 
             w="full" 
-            px={4} 
-            py={3}
+            px={isCollapsed ? 1 : 4} 
+            py={isCollapsed ? 1 : 3}
             borderTop="1px"
             borderColor="gray.100"
           >
