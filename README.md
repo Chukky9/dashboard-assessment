@@ -21,7 +21,7 @@ A modern, responsive dashboard built with Next.js 14, TypeScript, and Chakra UI.
 
 ## 🛠️ Tech Stack
 
-- **Framework**: [Next.js 14](https://nextjs.org/) (App Router)
+- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
 - **Language**: [TypeScript](https://www.typescriptlang.org/)
 - **Styling**: 
   - [Chakra UI](https://chakra-ui.com/) (v3.24.0)
