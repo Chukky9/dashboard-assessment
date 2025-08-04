@@ -1,6 +1,6 @@
 # Dashboard Assessment
 
-A modern, responsive dashboard built with Next.js 14, TypeScript, and Chakra UI. This project demonstrates best practices in frontend development, including accessibility, component reusability, and modern state management.
+A modern, responsive dashboard built with Next.js 15, TypeScript, and Chakra UI. This project demonstrates best practices in frontend development, including accessibility, component reusability, and modern state management.
 
 ## 🚀 Live Demo
 
@@ -158,4 +158,4 @@ While this is an assessment project, it follows standard contribution guidelines
 
 ## 📞 Contact
 
-For questions or feedback about this assessment, please reach out to [your-email@example.com].
+For questions or feedback about this assessment, please reach out to chukkyalozie@gmail.com
